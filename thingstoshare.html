@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Things to Share</title>
+    <link rel="stylesheet" type="text/css" href="css/mysite.css">
 </head>
+<style>
+    @keyframes fade { 50% { opacity: 0; } }
+    .blink_me_alarm { animation: fade 4s infinite; color: red; }
+    .div1 {width: 300px; height: 25px; border: 1px solid #4f2fb6; transition: transform 2s;}
+    .div1:hover { width: 300px; height: 25px; transform: scale(2) }
+</style>
 <body>
 <!--Site Navigation Header-->
 <!--Need to adjust reference links as I add the rest of the pages.-->
-<h1 align="center"><button style="padding: 10px 24px; font-size: 24px;" onclick="location.href='index.html'" float="center" margin="right">About Me</button> <button style="padding: 10px 24px; font-size: 24px;" onclick="location.href='thingstoshare.html'" float="center" margin="right">Things to Share</button> <button style="padding: 10px 24px; font-size: 24px;" onclick="location.href='hobbies.html'" float="center" margin="right">List of Hobbies</button> <button style="padding: 10px 24px; font-size: 24px;" onclick="location.href='specialevents.html'" float="center" margin="right">Special Events or Announcements</button> <button style="padding: 10px 24px; font-size: 24px;" onclick="location.href='contactinfo.html'" float="center" margin="right">Contact Me</button> </h1>
+<h1 align="center"><button onclick="location.href='index.html'" float="center" margin="right">About Me</button> <button onclick="location.href='thingstoshare.html'" float="center" margin="right">Things to Share</button> <button onclick="location.href='hobbies.html'" float="center" margin="right">List of Hobbies</button> <button onclick="location.href='specialevents.html'" float="center" margin="right">Special Events or Announcements</button> <button onclick="location.href='contactinfo.html'" float="center" margin="right">Contact Me</button> </h1>
 <br />
 <br />
 <!--Page Name-->
@@ -23,11 +30,16 @@
             <source src="media/firstkiss.mp4" type="video/mp4">
             Your browser does not support the video tag.
     </video>
-    <p align="center">This was my wife and I's first kiss as husband and wife</p>
+    <p align="center"></p>
+    <h4 align ="center" class="blink_me_alarm">This was my wife and I's first kiss as husband and wife</h4>
 </div>
 
+<audio id="background-audio" src="shrek.wav" autoplay loop></audio>
 
-<h3 align="left"><button style="padding: 5px 5px; font-size: 12px;" onclick="location.href='photocollection.html'" float="center" margin="right">Click here to see a photo collection of some things.</button> <br /><button style="padding: 5px 5px; font-size: 12px;" onclick="location.href='notablemap.html'" float="center" margin="right">Click here to see a map with notable places</button></h3>
+<div class="div1"><h3 align="left"><button class="smallbtn" onclick="location.href='photocollection.html'" float="center" margin="right">Click here to see a photo collection of some things.</button></h3></div>
+<br />
+<br />
+<div class="div1"><button class="smallbtn" onclick="location.href='notablemap.html'" float="center" margin="right">Click here to see a map with notable places</button></div>
 
 </body>
 </html>

@@ -1,0 +1,16 @@
+        body {margin-top: 20px; margin-left: 20px; background-color: rgb(231,229,229);}
+        h1 {color: #000000; font-family: Arial; font-weight: bold; font-size: 32px; margin: 0 0 16px;}
+        h2 {color: #ee0f0f; font-family: Arial; font-weight: bold; font-size: 28px; margin: 0 0 8px;}
+        h3 {color: #000000; font-family: Arial; font-weight: bold; font-size: 22px; margin: 0 0 8px;}
+        h4 {color: #000000; font-family: Arial; font-weight: bold; font-size: 16px; margin: 0 0 8px;}
+        li {color: #000000; font-family: 'Comic Sans MS'; font-size: 14px; margin: 0 0 8px;}
+        .centerul > li {font-size: 20px; font-weight: bold;}
+        .centerul li li {font-size: 14px; font-weight: normal;}
+        p {font-family: 'Brush Script MT', 'Brush Script Std', cursive; font-size: 18px; margin: 16px 0 24px;}
+        button {color: #000000; font-family: 'Comic Sans MS', cursive; font-weight: cu; padding: 10px 24px; font-size: 20px; margin: 0 0 8px; }
+        a {font-family: Arial; color: rgb(14, 163, 231); background: rgb(231,229,229); text-align: center; text-decoration: none;}
+        .smallbtn {color: #000000; font-family: 'Brush Script MT', 'Brush Script Std', cursive; font-weight: bold; font-size: 12px; padding: 5px 5px; margin: 0 0 8px; }
+        .hero-banner {background: url('images/events.webp'); min-height: 600px; background-position: center; background-repeat: no-repeat; background-size: cover; }
+        #background-audio {opacity: 0; visibility: hidden; position: absolute; }
+        .centerul {text-align: center; list-style-position: inside;}
+}
