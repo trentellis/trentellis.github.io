@@ -1,3 +1,17 @@
+        /*Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Black+Ops+One&family=Tirra:wght@400;500;600;700;800;900&display=swap');
+        
+        /*Google Fonts */
+        .birthstone-regular {font-family: "Birthstone", cursive; font-weight: 400; font-style: normal;}
+        .tirra-regular {font-family: "Tirra", cursive; font-weight: 400; font-style: normal;}
+        .tirra-medium {font-family: "Tirra", cursive; font-weight: 500; font-style: normal;}
+        .tirra-semibold {font-family: "Tirra", cursive; font-weight: 600; font-style: normal;}
+        .tirra-bold {font-family: "Tirra", cursive; font-weight: 700; font-style: normal;}
+        .tirra-extrabold {font-family: "Tirra", cursive; font-weight: 800; font-style: normal;}
+        .tirra-black {font-family: "Tirra", cursive; font-weight: 900; font-style: normal;}
+        .black-ops-one-regular {font-family: "Black Ops One", system-ui; font-weight: 400; font-style: normal;}
+        
+        /*CSS Rules */
         body {margin-top: 20px; margin-left: 20px; background-color: rgb(231,229,229);}
         h1 {color: #000000; font-family: Arial; font-weight: bold; font-size: 32px; margin: 0 0 16px;}
         h2 {color: #ee0f0f; font-family: Arial; font-weight: bold; font-size: 28px; margin: 0 0 8px;}
@@ -13,3 +27,10 @@
         .hero-banner {background: url('images/dexter.jpeg'); min-height: 600px; background-position: center; background-repeat: no-repeat; background-size: cover; }
         #background-audio {opacity: 0; visibility: hidden; position: absolute; }
         .centerul {text-align: center; list-style-position: inside;}
+        #special {font-family: "Birthstone", cursive !important; font-size: 40px; font-weight: 400; font-style: normal;}
+        .timer-container {display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #1a1a1a; }
+        #live-timer {font-family: 'Courier New', Courier, monospace; font-size: 4rem; color: #00ffcc; background-color: #333; padding: 20px 40px; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);}
+
+        
+
+
