@@ -5,101 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Special Events</title>
     <link rel="stylesheet" type="text/css" href="css/mysite.css">
-    
+    <script src="js/milestonejs.js"></script>
     <style>
         .hero-banner {background: url('images/events.webp'); min-height: 350px; background-position: center; background-repeat: no-repeat; background-size: cover; }
     </style>
 
-    <script>
-        function textReplace()
-        {
-            //alert("New Event!");
-
-            // Get the current element
-            var currentNode = document.querySelector('#hello-text');
-
-            // Create a new element
-            var newNode = document.createElement('div');
-
-            // Add ID and content
-            newNode.id = 'salutations';
-            newNode.innerHTML = '<div>' +
-        '<table width="100%" border="1">' +
-            '<tr width="33%">' +
-                '<div align="center">' +
-                '<th id="special">' +
-                   '<p>Upcoming Events</p>' +
-                '</th>' +
-                '<th id="special">' +
-                    '<p>Description</p>' +
-                '</th>' +
-                '<th id="special">' +
-                    '<p>Date</p>' +
-                '</th>' +
-                '</div>' +
-            '</tr>' +
-            '<tr width="33%">' +
-                '<div align="center">' +
-                '<td align="left" id="special">' +
-                   '<p>Grand Theft Auto IV Launch</p>' +
-                '</td>' +
-                '<td id="special">' +
-                    '<p>I am looking forward to the next game released by Rockstar Games, releasing this coming Fall 2026.</p>' +
-                '</td>' +
-                '<td align="center" id="timer-container">' +
-                    '<p id="live-timer">00 days 00 minutes</p>' +
-                '</td>' +
-                '</div>' +
-            '</tr>' +
-        '</table>' +
-    '</div>';
-
-            // Replace the current node with the new node
-            currentNode.parentNode.replaceChild(newNode, currentNode);
-            updateCountdown();
-            const timerInterval = setInterval(updateCountdown, 60000); // Updates every 60 seconds
-
-            }
-        function dateTime()
-        {
-            //Dates and functions
-            let now = new Date();
-            let eventDay = new Date(2026, 10, 19, 0, 0, 0);
-            console.log("Current date and time is " + now);
-            console.log("Past date and time is " + eventDay);
-            console.log("Time difference is " + (now.getMinutes() - eventDay.getMinutes()));
-        }
-        // Set target to November 11, 2026 at midnight
-        const targetDate = new Date("2026-11-19T00:00:00").getTime();
-
-        function updateCountdown() {
-            const now = new Date().getTime();
-            const timeDifference = targetDate - now;
-
-            // Stop the timer if the deadline has passed
-            if (timeDifference < 0) {
-                document.getElementById('live-timer').textContent = "00d 00m";
-                clearInterval(timerInterval);
-                return;
-            }
-
-            // Calculate full days remaining
-            const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            
-            // Calculate remaining minutes after days are removed
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60));
-
-            // Format with leading zeros
-            const dStr = String(days).padStart(2, '0');
-            const mStr = String(minutes).padStart(2, '0');
-
-            // Display the output
-            document.getElementById('live-timer').textContent = `${dStr} days and ${mStr} minutes`;
-            }
-
-    </script>
 </head>
-<body>
+<body onLoad="specEventsPage()">
 <!--Site Navigation Header-->
 <br />
 <h1 align="center"><button onclick="location.href='index.html'" float="center" margin="right">About Me</button> <button onclick="location.href='thingstoshare.html'" float="center" margin="right">Things to Share</button> <button onclick="location.href='hobbies.html'" float="center" margin="right">List of Hobbies</button> <button onclick="location.href='specialevents.html'" float="center" margin="right">Special Events or Announcements</button> <button onclick="location.href='christian.html'" float="center" margin="right">Christian Worldview</button> <button onclick="location.href='contactinfo.html'" float="center" margin="right">Contact Me</button></h1>
@@ -109,7 +21,7 @@
 <br />
 <br />
 <!--Page Name-->
-<h2 id="special" align="center">Special Events or Announcements</h2><p align="center">Stay tuned for updates on upcoming special events and announcements! <button onclick="textReplace()" float="center" margin="left">Refresh Events</button></p>
+<h2 id="special" align="center">Special Events or Announcements</h2><p align="center">Stay tuned for updates on upcoming special events and announcements! <button onclick="javascript:textReplace()" float="center" margin="left">Refresh Events</button></p>
 <br />
 <div id="hello-text">
         <table width="100%" border="1">
