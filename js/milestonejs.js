@@ -5,6 +5,7 @@ function init()
     console.log("Function init() called here.")
 }
 
+
 function specEventsPage()
 {
     console.log("Running specEventsPage() function.");
@@ -50,7 +51,20 @@ function textReplace()
                     '<p id="live-timer">00 days 00 minutes</p>' +
                 '</td>' +
                 '</div>' +
-            '</tr>' +
+            '</tr>' + 
+            '<tr width="33%">' +
+                '<div align="center">' +
+                '<td align="left" id="special">' +
+                   '<p>Graduation</p>' +
+                '</td>' +
+                '<td id="special">' +
+                    '<p>I am on track to graduate with my Bachelors degree in Computer Science in the Fall of 2028</p>' +
+                '</td>' +
+                '<td align="center">' +
+                    '<p>Fall of 2028</p></p>' +
+                '</td>' +
+                '</div>' +
+            '</tr>' + 
         '</table>' +
     '</div>';
 
@@ -60,21 +74,7 @@ function textReplace()
             const timerInterval = setInterval(updateCountdown, 60000); // Updates every 60 seconds
 
             }
-
-
-    function dateTime()
-        {
-            //Dates and functions
-            let now = new Date();
-            let eventDay = new Date(2026, 10, 19, 0, 0, 0);
-            console.log("Current date and time is " + now);
-            console.log("Past date and time is " + eventDay);
-            console.log("Time difference is " + (now.getMinutes() - eventDay.getMinutes()));
-        }
-        // Set target to November 11, 2026 at midnight
-        const targetDate = new Date("2026-11-19T00:00:00").getTime();
-
-        function updateCountdown() {
+    function updateCountdown() {
             const now = new Date().getTime();
             const timeDifference = targetDate - now;
 
@@ -99,4 +99,15 @@ function textReplace()
             document.getElementById('live-timer').textContent = `${dStr} days and ${mStr} minutes`;
             }
 
-function 
+
+    function dateTime()
+        {
+            //Dates and functions
+            let now = new Date();
+            let eventDay = new Date(2026, 10, 19, 0, 0, 0);
+            console.log("Current date and time is " + now);
+            console.log("Past date and time is " + eventDay);
+            console.log("Time difference is " + (now.getMinutes() - eventDay.getMinutes()));
+        }
+        // Set target to November 11, 2026 at midnight
+        const targetDate = new Date("2026-11-19T00:00:00").getTime();
