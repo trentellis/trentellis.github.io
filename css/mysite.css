@@ -17,9 +17,10 @@
         h2 {color: #ee0f0f; font-family: Arial; font-weight: bold; font-size: 28px; margin: 0 0 8px;}
         h3 {color: #000000; font-family: Arial; font-weight: bold; font-size: 22px; margin: 0 0 8px;}
         h4 {color: #000000; font-family: Arial; font-weight: bold; font-size: 16px; margin: 0 0 8px;}
-        li {color: #000000; font-family: 'Comic Sans MS'; font-size: 14px; margin: 0 0 8px;}
+        /* li {color: #000000; font-family: 'Comic Sans MS'; font-size: 14px; margin: 0 0 8px;} 
         .centerul > li {font-size: 20px; font-weight: bold;}
-        .centerul li li {font-size: 14px; font-weight: normal;}
+        .centerul li li {font-size: 14px; font-weight: normal;} 
+        */
         p {font-family: 'Brush Script MT', 'Brush Script Std', cursive; font-size: 18px; margin: 16px 0 24px;}
         button {color: #000000; font-family: 'Comic Sans MS', cursive; font-weight: cu; padding: 10px 24px; font-size: 20px; margin: 0 0 8px; }
         a {font-family: Arial; color: rgb(14, 163, 231); background: rgb(231,229,229); text-align: center; text-decoration: none;}
@@ -31,6 +32,98 @@
         .timer-container {display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #1a1a1a; }
         #live-timer {font-family: 'Courier New', Courier, monospace; font-size: 4rem; color: #00ffcc; background-color: #333; padding: 20px 40px; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 255, 204, 0.3);}
 
+        /* NAVBAR STUFF 
+
+        --#{$prefix}navbar-padding-x: #{if($navbar-padding-x == null, 0, $navbar-padding-x)};
+        --#{$prefix}navbar-padding-y: #{$navbar-padding-y};
+        --#{$prefix}navbar-color: #{$navbar-light-color};
+        --#{$prefix}navbar-hover-color: #{$navbar-light-hover-color};
+        --#{$prefix}navbar-disabled-color: #{$navbar-light-disabled-color};
+        --#{$prefix}navbar-active-color: #{$navbar-light-active-color};
+        --#{$prefix}navbar-brand-padding-y: #{$navbar-brand-padding-y};
+        --#{$prefix}navbar-brand-margin-end: #{$navbar-brand-margin-end};
+        --#{$prefix}navbar-brand-font-size: #{$navbar-brand-font-size};
+        --#{$prefix}navbar-brand-color: #{$navbar-light-brand-color};
+        --#{$prefix}navbar-brand-hover-color: #{$navbar-light-brand-hover-color};
+        --#{$prefix}navbar-nav-link-padding-x: #{$navbar-nav-link-padding-x};
+        --#{$prefix}navbar-toggler-padding-y: #{$navbar-toggler-padding-y};
+        --#{$prefix}navbar-toggler-padding-x: #{$navbar-toggler-padding-x};
+        --#{$prefix}navbar-toggler-font-size: #{$navbar-toggler-font-size};
+        --#{$prefix}navbar-toggler-icon-bg: #{escape-svg($navbar-light-toggler-icon-bg)};
+        --#{$prefix}navbar-toggler-border-color: #{$navbar-light-toggler-border-color};
+        --#{$prefix}navbar-toggler-border-radius: #{$navbar-toggler-border-radius};
+        --#{$prefix}navbar-toggler-focus-width: #{$navbar-toggler-focus-width};
+        --#{$prefix}navbar-toggler-transition: #{$navbar-toggler-transition};
+
+        $navbar-padding-y:                  $spacer * .5;
+        $navbar-padding-x:                  null;
+
+        $navbar-nav-link-padding-x:         .5rem;
+
+        $navbar-brand-font-size:            $font-size-lg;
+        // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+        $nav-link-height:                   $font-size-base * $line-height-base + $nav-link-padding-y * 2;
+        $navbar-brand-height:               $navbar-brand-font-size * $line-height-base;
+        $navbar-brand-padding-y:            ($nav-link-height - $navbar-brand-height) * .5;
+        $navbar-brand-margin-end:           1rem;
+
+        $navbar-toggler-padding-y:          .25rem;
+        $navbar-toggler-padding-x:          .75rem;
+        $navbar-toggler-font-size:          $font-size-lg;
+        $navbar-toggler-border-radius:      $btn-border-radius;
+        $navbar-toggler-focus-width:        $btn-focus-width;
+        $navbar-toggler-transition:         box-shadow .15s ease-in-out;
+
+        $navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .65);
+        $navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8);
+        $navbar-light-active-color:         rgba(var(--#{$prefix}emphasis-color-rgb), 1);
+        $navbar-light-disabled-color:       rgba(var(--#{$prefix}emphasis-color-rgb), .3);
+        $navbar-light-icon-color:           rgba($body-color, .75);
+        $navbar-light-toggler-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-light-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+        $navbar-light-toggler-border-color: rgba(var(--#{$prefix}emphasis-color-rgb), .15);
+        $navbar-light-brand-color:          $navbar-light-active-color;
+        $navbar-light-brand-hover-color:    $navbar-light-active-color;
+        $navbar-dark-color:                 rgba($white, .55);
+        $navbar-dark-hover-color:           rgba($white, .75);
+        $navbar-dark-active-color:          $white;
+        $navbar-dark-disabled-color:        rgba($white, .25);
+        $navbar-dark-icon-color:            $navbar-dark-color;
+        $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-icon-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+        $navbar-dark-toggler-border-color:  rgba($white, .1);
+        $navbar-dark-brand-color:           $navbar-dark-active-color;
+        $navbar-dark-brand-hover-color:     $navbar-dark-active-color;
+
         
+        
+        .image-container {
+        position: relative;
+        display: inline-block; 
+        }
 
+        .main-image {
+        display: block; 
+        width: 100%;
+        max-width: 600px;
+        }
 
+               
+        /* Styling */
+        background-color: rgba(0, 0, 0, 0.85);
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 6px;
+        font-family: sans-serif;
+        white-space: nowrap;
+        
+        /* Hover/Visibility effects */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        pointer-events: none; /* Prevents popover from blocking clicks when hidden */
+        }
+
+        /* Show popover on image hover */
+        .image-container:hover .popover {
+        opacity: 1;
+        visibility: visible;
+        } 
