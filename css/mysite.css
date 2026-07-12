@@ -73,6 +73,7 @@
         $navbar-toggler-border-radius:      $btn-border-radius;
         $navbar-toggler-focus-width:        $btn-focus-width;
         $navbar-toggler-transition:         box-shadow .15s ease-in-out;
+        
 
         $navbar-light-color:                rgba(var(--#{$prefix}emphasis-color-rgb), .65);
         $navbar-light-hover-color:          rgba(var(--#{$prefix}emphasis-color-rgb), .8);
@@ -92,38 +93,5 @@
         $navbar-dark-toggler-border-color:  rgba($white, .1);
         $navbar-dark-brand-color:           $navbar-dark-active-color;
         $navbar-dark-brand-hover-color:     $navbar-dark-active-color;
-
         
-        
-        .image-container {
-        position: relative;
-        display: inline-block; 
-        }
-
-        .main-image {
-        display: block; 
-        width: 100%;
-        max-width: 600px;
-        }
-
-               
-        /* Styling */
-        background-color: rgba(0, 0, 0, 0.85);
-        color: #fff;
-        padding: 10px 15px;
-        border-radius: 6px;
-        font-family: sans-serif;
-        white-space: nowrap;
-        
-        /* Hover/Visibility effects */
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity 0.3s ease, visibility 0.3s ease;
-        pointer-events: none; /* Prevents popover from blocking clicks when hidden */
-        }
-
-        /* Show popover on image hover */
-        .image-container:hover .popover {
-        opacity: 1;
-        visibility: visible;
-        } 
+        */
